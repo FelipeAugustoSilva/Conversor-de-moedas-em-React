@@ -1,0 +1,10 @@
+//Cria o projeto
+npx create-vite conversor_moeda
+
+//Segue
+Done. Now run:
+
+  cd conversor_moeda
+  npm install
+  npm i axios
+  npm run dev
