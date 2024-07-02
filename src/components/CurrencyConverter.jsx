@@ -24,8 +24,8 @@ const CurrencyConverter = () => {
   useEffect(() => {
     if(rates) {
       const rateFrom = rates[fromCurrency] || 0;
-      const rateTo = rates [toCurrency] || 0;
-      setConvertedAmount(((amount /rateFrom) * rateTo).toFixed(2));
+      const rateTo = rates[toCurrency] || 0;
+      setConvertedAmount(((amount / rateFrom) * rateTo).toFixed(2));
     }
   },[amount, rates, fromCurrency, toCurrency]);
 
@@ -35,7 +35,7 @@ const CurrencyConverter = () => {
   return (
     <div className="converter">
         <h2>Conversor de Moedas</h2>
-        <input type="number" placeholder="Digite o valor..." value={amount} onChange={(e) => setAmont(e.target.value)}/>
+        <input type="number" placeholder="Digite o valor..." value={amount} onChange={(e) => setAmount(e.target.value)}/>
         <span>Selecione as moedas</span>
         <select value={fromCurrency} onChange={(e) => fromCurrency(e.target.value)}>
            {Object.keys(rates).map((currency) => (
